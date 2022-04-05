@@ -1,0 +1,314 @@
+\documentclass{article}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[super]{nth}
+\usepackage[table]{xcolor}
+\setlength{\arrayrulewidth}{0.5mm}
+\graphicspath{ {./images/} }
+\usepackage[margin=20mm]{geometry}
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+\renewcommand{\arraystretch}{1.5}
+\newcommand{\f}[2]{f_{#1}(#2)}
+\newcommand{\code}[1]{\texttt{#1}}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\set}{\left\{}{\right\}}
+\DeclarePairedDelimiter{\parens}{\lparen}{\rparen}
+\title{HW3 Report}
+\date{}
+\begin{document}
+\maketitle
+\section*{Section 1}
+\subsection*{Q1:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{images/q1.png}
+        \caption{KDE plots of \code{VirusScore} conditioned on different conditions of \code{blood\_type}}
+        \label{fig:q1}
+    \end{figure}
+\subsection*{Q2:}
+    \paragraph*{}
+    In figure \ref{fig:q1} in the plot of A versus not A, we observe that the groups of patients with and and without "A" in their blood types are mostly seperable along a boundary that is approximately the \code{VirusScore} of $0.225$. 
+    \paragraph*{}
+    Therefore, the condition of contains/does not contain A would be most informative for learning \code{VirusScore}.
+    As it turns out, we decided already in hw1 to create this feature.
+\subsection*{Q3:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7]{images/q3.png}
+    \end{figure}
+\subsection*{Q4:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.48]{q4.png}
+        \caption{Plot of Residuals of analytical and numerical gradients}
+        \label{fig:q4}
+    \end{figure}
+    \paragraph*{}
+    As we can see in figure \ref{fig:q4}, the difference between the analytic and numerical gradients increases in a  monotonic fashion as the value of $\delta$ increases. This is logical, as $\delta$ is the differential size used in the definition of the numerical gradient, and therefore a smaller $\delta$  equates to a more precise estimation of the analytic gradient by the numerical gradient.
+\subsection*{Q5:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.35]{q5.png}
+        \caption{Graphs of Training and Validation Losses as Functions of Iteration Number for Different  Learning Rates}
+        \label{fig:q5}
+    \end{figure}
+    \paragraph*{}
+    We can see in figure \ref{fig:q5} that for smaller lr, for those that converge, the convergence is at a higher loss for both the training and validation. This matches the theory, since if the lr is too small, the SGD algorithm is likely to converge to a sub-optimal solution. In addition we observe that for the lr equal to $0.1$ the graphs do not converge for both training and validation losses and for lr equal to $0.01$ the validation loss does not converge, which fits the theory that says that learning rates that are too high are likely to cause the SGD algorithm to take steps that are too large and thus repeatedly skip-over the optimal solution. This points to $0.001$ as being the optimal lr, as both the validation and training losses converge to values that are substantially lower than the next smaller lr.
+\subsection*{Q6:}
+    \begin{figure}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \rowcolor{gray!60}
+            Model & Section & Train MSE & Valid MSE\\ \hline
+            \rowcolor{gray!20}
+            ~&~ & \multicolumn{2}{c|}{Cross Validated}\\ \hline
+            Dummy & 3 & $0.0204$ & $0.0205$\\ \hline
+        \end{tabular}
+        \caption{Training and Validation MSE Errors for Dummy Regressor}
+    \end{figure}
+\section*{Section 4}
+\subsection*{Q7:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{q7.png}
+        \caption{Graph of Training and Validation Errors of Ridge Regressor as a Function of \code{alpha}}
+        \label{fig:q7}
+    \end{figure}
+    Optimal alpha for validation: 25.950242113997373\\
+    Validation error for optimal alpha: 0.017402908351734445
+
+\subsection*{Q8:}
+    \begin{figure}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \rowcolor{gray!60}
+            Model & Section & Train MSE & Valid MSE\\ \hline
+            \rowcolor{gray!20}
+            ~&~ & \multicolumn{2}{c|}{Cross Validated}\\ \hline
+            Dummy & 3 & $0.0204$ & $0.0205$\\ \hline
+            Ridge linear & 4 & $0.0172$ & $0.0174$\\ \hline
+        \end{tabular}
+        \caption{Training and Validation MSE Errors for Dummy and Ridge Regressors}
+    \end{figure}
+\subsection*{Q9:}
+    \begin{figure}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            \rowcolor{gray!60}
+            Feature & Coefficient \\ \hline
+            \code{blood\_A\_AB} & $0.0970$ \\ \hline
+            \code{num\_of\_siblings} & $0.0298$ \\ \hline
+            \code{household\_income} & $-0.0275$ \\ \hline
+            \code{PCR\_02} & $-0.0141$ \\ \hline
+            \code{PCR\_01} & $-0.0113$ \\ \hline
+        \end{tabular}
+        \caption{Five Features From Ridge Regressor With Largest Coefficients in Terms of Absolute Value, From Largest to Smallest}
+    \end{figure}
+\subsection*{Q10:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7]{q10.png}
+        \caption{Graph of Absolute Values of Learned Coefficients of Ridge Regressor}
+        \label{fig:q10}
+    \end{figure}
+\section*{Section 5}
+\subsection*{Q11:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{q11.png}
+        \caption{Graph of Training and Validation Errors of Lasso Regressor as a Function of \code{alpha}}
+        \label{fig:q11}
+    \end{figure}
+    Optimal alpha for validation: 0.0005336699231206312\\
+    Validation error for optimal alpha: 0.01739141826673015
+
+\subsection*{Q12:}
+    \paragraph*{}
+    Yes, the graph for tunning the $\lambda$ of the lasso regressor as can be seen in figure \ref{fig:q11} is different from the graph obtained for the ridge regressor in figure \ref{fig:q7} in a number of aspects.
+    \paragraph*{}
+    Firstly, the steepness of the upwards curve is much more abrupt and significant in the case of the lasso regressor than it is for the ridge. This can be explained by the way in which lasso differs than ridge: Whereas a ridge regressor utilizes $\ell^2$ regularization, lasso is implemented with $\ell^1$. This means that as $\lambda$ (\code{alpha}) is increased, the weight coefficients for the two regressors decrease in different manners. In the case of ridge, the coefficients experience weight decay, meaning they gradually tend to zero, whereas lasso tends to perform variable selection, meaning that the coefficients are more abruptly forced to zero one-by-one. This is reflected in the graphs, as the abruptness seen in figure \ref{fig:q11} could be explained by a certain significant coefficient abruptly forced to zero, whereas in the ridge graph of figure \ref{fig:q7}, coefficients are more gradually lowered and therefore the curve is more gradual.
+    \paragraph*{}
+    Furthermore, the upwards trend in the graph of lasso begins at a much lower \code{alpha} approximately equal to $0.025$ than it does for ridge (approximately \code{alpha} equal to $70$). This can be again explained by the behavior of $\ell^1$ as opposed to $\ell^2$: The decision of the lasso regressor to decrease a significant coefficient would be more abrupt and harsher than in the case of ridge, and therefore its effect on the accuracy would be seen almost immediately, and hence the earlier upwards trend in the lasso graph.
+    \paragraph*{}
+    Lastly, the optimal \code{alpha} for minimal validation error in thew case of lasso, equal to $0.0005$, is much smaller than that of ridge ($25.95$).
+
+
+\subsection*{Q13:}
+    \begin{figure}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \rowcolor{gray!60}
+            Model & Section & Train MSE & Valid MSE\\ \hline
+            \rowcolor{gray!20}
+            ~&~ & \multicolumn{2}{c|}{Cross Validated}\\ \hline
+            Dummy & 3 & $0.0204$ & $0.0205$\\ \hline
+            Ridge linear & 4 & $0.0172$ & $0.0174$\\ \hline
+            Lasso linear & 5 & $0.0172$ & $0.0173$\\ \hline
+        \end{tabular}
+        \caption{Training and Validation MSE Errors for Dummy, Ridge, and Lasso Regressors}
+    \end{figure}
+\subsection*{Q14:}
+    \begin{figure}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            \rowcolor{gray!60}
+            Feature & Coefficient \\ \hline
+            \code{blood\_A\_AB} & $0.0993$ \\ \hline
+            \code{num\_of\_siblings} & $0.0297$ \\ \hline
+            \code{household\_income} & $-0.0223$ \\ \hline
+            \code{PCR\_02} & $-0.0064$ \\ \hline
+            \code{PCR\_10} & $0.0038$ \\ \hline
+        \end{tabular}
+        \caption{Five Features From Lasso Regressor With Largest Coefficients in Terms of Absolute Value, From Largest to Smallest}
+    \end{figure}
+\subsection*{Q15:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7]{q15.png}
+        \caption{Graph of Absolute Values of Learned Coefficients of Lasso Regressor}
+        \label{fig:q15}
+    \end{figure}
+    \paragraph*{}
+    In figure \ref{fig:q15} we see see that the Lasso model sets absolute values for each parameter which are equal or lower than those set by the Ridge model (as seen in figure \ref{fig:q10}). From this we can conclude that the Ridge model causes weight decay with $\ell^2$ regularization because it doesn't “dispose” within calculations the unimportant features but still gives it weight higher than 0. As for the Lasso model, we see that it causes variable selection with $\ell^1$ regularization (which include sparse solutions) as it ignores unimportant feature and gives less weight than Ridge model to some features. 
+    Another behavior which indicates the differences between the models is that the Lasso features coefficient reaches 0 faster than the Ridge model.
+
+
+\section*{Section 6}
+\subsection*{Q16:}
+    \paragraph*{}
+    When using a polynomial feature mapping, we can expect the training error to decrease and the validation error to increase. This is because the polynomial mapping will give more flexibility to the regression model to more closely try to fit the training data during training in a polynomial way, thereby leading to lower training error, but also causing overfitting and therefore leading to a higher validation error.
+\subsection*{Q17:}
+    Let $\underline{x}=\begin{bmatrix*}
+        x_1 \\  
+        x_2 \\  
+        \vdots \\
+        x_{d-1}\\
+        1\\
+    \end{bmatrix*}$
+    be a $d$-dimensional feature vector, and $z$ be the binary feature from question 2.
+    Let us then define the following \nth{2} degree polynomial mapping $\phi$:
+    \begin{align*}
+        \phi(\underline{x})=\begin{bmatrix*}
+            x_1 \cdot z\\
+            x_2 \cdot z\\
+            \vdots\\
+            x_{d-1} \cdot z\\
+            1 \cdot z\\
+            x_1 \cdot (1-z)\\
+            x_2 \cdot (1-z)\\
+            \vdots\\
+            x_{d-1} \cdot (1-z)\\
+            1 \cdot (1-z)\\
+        \end{bmatrix*}\\
+    \end{align*}
+    Let us now define the linear model $h_{poly}(\underline{x})=\underline{w^*}^T\phi(\underline{x})$, where $\underline{w^*}=\begin{bmatrix*}
+        w_1\\
+        w_2\\
+        \vdots\\
+        w_{d-1}\\
+        b_1\\
+        w_{d+1}\\
+        w_{d+2}\\
+        \vdots\\
+        w_{2d-1}\\
+        b_2
+    \end{bmatrix*}$
+     is a $2d$ dimensional weight vector. Let us also define $\underline{w_1}=\begin{bmatrix*}
+        w_1\\
+        w_2\\
+        \vdots\\
+        w_{d-1}\\
+        b_1\\
+     \end{bmatrix*}$
+    and define $\underline{w_2}=\begin{bmatrix*}
+        w_{d+1}\\
+        w_{d+2}\\
+        \vdots\\
+        w_{2d-1}\\
+        b_2
+     \end{bmatrix*}$.
+
+     Now let us consider the result of $h_{poly}$ applied on $\underline{x}$ where the feature $z$ in $\underline{x}$ is equal to 1:
+     \begin{align*}
+         h_{poly}(x)&=\underline{w^*}^T\phi(\underline{x})\\
+         &= w_1\cdot x_1 \cdot z + \dots + w_{d-1}\cdot x_{d-1} \cdot z + b_1 \cdot 1 \cdot z + w_{d+1}\cdot x_1 \cdot (1-z) + \dots + w_{2d-1}\cdot x_{d-1} \cdot (1-z) + b_2 \cdot 1 \cdot (1-z) \\
+         &= w_1\cdot x_1 + \dots + w_{d-1}\cdot x_{d-1} + b_1 + 0 + \dots + 0 + 0 \\
+         &= w_1\cdot x_1 + \dots + w_{d-1}\cdot x_{d-1} + b_1 \\
+         &= \underline{w_1}^T\underline{x}+b_1 
+     \end{align*}
+     Now let us consider the result of $h_{poly}(x)$ applied on $x$ where the feature $z$ in $x$ is equal to 0:
+     \begin{align*}
+         h_{poly}(x)&=w{*^T}\phi(x)\\
+         &= w_1\cdot x_1 \cdot z + \dots + w_{d-1}\cdot x_{d-1} \cdot z + b_1 \cdot 1 \cdot z + w_{d+1}\cdot x_1 \cdot (1-z) + \dots + w_{2d-1}\cdot x_{d-1} \cdot (1-z) + b_2 \cdot 1 \cdot (1-z) \\
+         &= 0 + \dots + 0 + 0 + w_{d+1}\cdot x_1  + \dots + w_{2d-1}\cdot x_{d-1}  + b_2  \\
+         &= \underline{w_2}^T\underline{x}+b_2
+     \end{align*}
+     We have shown that $h_{poly}=h_{multi}$. Therefore $h_{multi}=h_{poly}\in \mathcal{H}_{poly}$.
+     \paragraph*{}
+     A \nth{2} degree polynomial model has more complex and flexible features and therefore mean it can more exactly model the training data, leading to lower training error but higher validation error due to overfitting. In the other hand, $h_{multi}$ has less rich features and therefore is less likely to precisely fit the training data leading to higher training error but also mean it is more general and therefore more likely to have lower validation error.
+        
+
+\subsection*{Q18:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{q18.png}
+        \caption{Graph of Training and Validation Errors of Polynomially-Mapped Ridge Regressor as a Function of \code{alpha}}
+        \label{fig:q8}
+    \end{figure}
+    Optimal alpha for validation: 200.923300256505\\
+    Validation error for optimal alpha: 0.01747015013288799
+
+\subsection*{Q19:}
+    \begin{figure}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \rowcolor{gray!60}
+            Model & Section & Train MSE & Valid MSE\\ \hline
+            \rowcolor{gray!20}
+            ~&~ & \multicolumn{2}{c|}{Cross Validated}\\ \hline
+            Dummy & 3 & $0.0204$ & $0.0205$\\ \hline
+            Ridge linear & 4 & $0.0172$ & $0.0174$\\ \hline
+            Lasso linear & 5 & $0.0172$ & $0.0173$\\ \hline
+            Ridge polynomial & 6 & $0.0166$ & $0.0174$\\ \hline
+        \end{tabular}
+        \caption{Training and Validation MSE Errors for Dummy, Ridge, Lasso, and Polynomial Ridge Regressors}
+    \end{figure}
+
+\section*{Section 7}
+\subsection*{Q20:}
+    \begin{figure}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \rowcolor{gray!60}
+            Model & Section & Train MSE & Valid MSE & Test MSE\\ \hline
+            \rowcolor{gray!20}
+            ~&~ & \multicolumn{2}{c|}{Cross Validated} & Retrained \\ \hline
+            Dummy & 3 & $0.0204$ & $0.0205$ & $0.0182$\\ \hline
+            Ridge linear & 4 & $0.0172$ & $0.0174$ & $0.0163$\\ \hline
+            Lasso linear & 5 & $0.0172$ & $0.0173$ & $0.0162$\\ \hline
+            Ridge polynomial & 6 & $0.0166$ & $0.0174$ & $0.0164$\\ \hline
+        \end{tabular}
+        \caption{Training, Validation, and Test MSE Errors for Dummy, Ridge, Lasso, and Polynomial Ridge Regressors}
+        \label{fig:q20}
+    \end{figure}
+    \paragraph*{}
+    As can be seen in figure \ref{fig:q20}, the lasso regressor performed the best on the test set, as it achieved the lowest MSE of $0.0162$. On the other hand, the dummy regressor performed the worst, as expected. 
+    \paragraph*{}
+    Contrary to what is expected according to the theory, the test scores were better for all the models than their respective scores for both the training and validation sets, suggesting an occurrence of underfitting. This is likely due to the fact that the optimal values for $lambda$ for the models in terms of validation accuracy where relatively large except for lasso, meaning that our models where more heavily regularized, and thus expected to have have lower variance and thus better fitting of unseen data, at the cost of lower accuracy in terms of training.  Another possible explanation for this is that the models performed better once they were trained on a larger dataset. A third (more unlikely) explanation is that the test set formed by our seed contains data that happens to  fit our trained models better than the actual training set. 
+\end{document}
