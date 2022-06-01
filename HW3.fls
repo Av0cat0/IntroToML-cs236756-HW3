@@ -1,7 +1,7 @@
 PWD c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3
 INPUT C:\Users\dcohe\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\313575599-308160647.tex
-OUTPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\313575599-308160647.log
+INPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\HW3.tex
+OUTPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\HW3.log
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
@@ -70,9 +70,9 @@ INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxet
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
-INPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\313575599-308160647.aux
-INPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\313575599-308160647.aux
-OUTPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\313575599-308160647.aux
+INPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\HW3.aux
+INPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\HW3.aux
+OUTPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\HW3.aux
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
@@ -178,7 +178,7 @@ INPUT .\images\q18.png
 INPUT .\images\q18.png
 INPUT .\images\q18.png
 INPUT .\images\q18.png
-INPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\313575599-308160647.aux
+INPUT c:\Users\dcohe\Documents\Technion\winter_2021\ml\hw3\HW3.aux
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\dcohe\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
