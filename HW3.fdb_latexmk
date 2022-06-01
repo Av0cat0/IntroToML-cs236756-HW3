@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1643292728 "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/313575599-308160647.tex" "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/313575599-308160647.pdf" "313575599-308160647" 1643292731
-  "313575599-308160647.aux" 1643292730 3063 9c6cc9bfaab66192e808106398ce0fa3 "pdflatex"
-  "313575599-308160647.tex" 1643292728 17195 3841c08ec31caa43d63ac003ee9b53f7 ""
+["pdflatex"] 1643292728 "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/HW3.tex" "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/HW3.pdf" "HW3" 1643292731
+  "HW3.aux" 1643292730 3063 9c6cc9bfaab66192e808106398ce0fa3 "pdflatex"
+  "HW3.tex" 1643292728 17195 3841c08ec31caa43d63ac003ee9b53f7 ""
   "C:/Users/dcohe/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1573509850 4273480 09395ba4ff32442c1700c157b268cd9b ""
   "C:/Users/dcohe/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1643287945 120965 3f65edfc8acf527314734c51b0bb7f21 ""
   "C:/Users/dcohe/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -83,8 +83,8 @@
   "C:/Users/dcohe/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/longtable.sty" 1570126938 12125 d0d4ebd542e3988278244a32c1fea9b5 ""
   "C:/Users/dcohe/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/tabularx.sty" 1570126938 7149 0761e0046ae54b8c3b512ab8e07fef1c ""
   "C:/Users/dcohe/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/313575599-308160647.aux" 1643292730 3063 9c6cc9bfaab66192e808106398ce0fa3 ""
-  "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/313575599-308160647.tex" 1643292728 17195 3841c08ec31caa43d63ac003ee9b53f7 ""
+  "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/HW3.aux" 1643292730 3063 9c6cc9bfaab66192e808106398ce0fa3 ""
+  "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/HW3.tex" 1643292728 17195 3841c08ec31caa43d63ac003ee9b53f7 ""
   "images/q1.png" 1642529764 48666 bead0f7fa8deb4ab7dcf71688fb88315 ""
   "images/q10.png" 1643139553 11766 68ee0ba1225f58d97633aee3340c18e5 ""
   "images/q11.png" 1643139818 31516 96b33665d0a6c4aac25b2d7b24b98784 ""
@@ -95,8 +95,8 @@
   "images/q5.png" 1642679168 78612 d2d0fc22799a0c77653ef055f689889d ""
   "images/q7.png" 1643136654 33653 60cc592c6e26e5dbe0cef301bfeae110 ""
   (generated)
-  "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/313575599-308160647.pdf"
-  "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/313575599-308160647.log"
-  "313575599-308160647.pdf"
-  "313575599-308160647.aux"
-  "313575599-308160647.log"
+  "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/HW3.pdf"
+  "c:/Users/dcohe/Documents/Technion/winter_2021/ml/hw3/HW3.log"
+  "HW3.pdf"
+  "HW3.aux"
+  "HW3.log"
